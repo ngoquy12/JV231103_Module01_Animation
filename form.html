@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="overlay form-container">
+      <form class="form">
+        <div class="form-header">
+          <h3 class="form-heading">Đăng ký tài khoản</h3>
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="form-body">
+          <div class="form-group">
+            <label class="form-label" for="username">Họ và tên</label>
+            <input
+              placeholder="Họ tên đầy đủ"
+              id="username"
+              type="text"
+              class="form-input"
+              value="Ngọ Văn Quý"
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Giới tính</label>
+            <div class="radio-group">
+              <div>
+                <input
+                  name="gender"
+                  id="male"
+                  type="radio"
+                  class="form-radio"
+                  checked
+                />
+                <label for="male">Nam</label>
+              </div>
+              <div>
+                <input
+                  name="gender"
+                  id="female"
+                  type="radio"
+                  class="form-radio"
+                />
+                <label for="female">Nữ</label>
+              </div>
+              <div>
+                <input
+                  name="gender"
+                  id="other"
+                  type="radio"
+                  class="form-radio"
+                />
+                <label for="other">Khác</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="date">Ngày sinh</label>
+            <input id="date" type="date" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Địa chỉ email</label>
+            <input
+              placeholder="example@gmail.com"
+              id="email"
+              type="text"
+              class="form-input"
+            />
+          </div>
+        </div>
+        <div class="form-footer">
+          <button class="button button-secondary">Hủy</button>
+          <button class="button button-primary">Đăng ký</button>
+        </div>
+      </form>
+    </div>
+    <!-- Script -->
+    <script src="./index.js"></script>
+  </body>
+</html>

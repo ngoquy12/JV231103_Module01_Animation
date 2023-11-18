@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+}
+
+:root {
+  --text-color-primary: #000000;
+  --bg-primary: #50b83c;
+  --text-white: #fff;
+  --text-red: #e60000;
+  --bg-white: #fff;
+}
+
+/* Loading */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  height: 70px;
+  width: 70px;
+  border: 5px solid #fff;
+  border-right: 5px solid transparent;
+  border-radius: 50%;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: loading 1s infinite linear;
+}
+
+/* Tạo các hiệu ứng animation */
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Range */
+.range-container {
+  height: 10px;
+  width: 500px;
+  border: 1px solid #dadada;
+  border-radius: 10px;
+}
+
+.range {
+  height: 100%;
+  background-color: red;
+  border-radius: 10px;
+  animation: runner 10s infinite linear;
+}
+
+@keyframes runner {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* Notifycation */
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.notifycation {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  min-height: 100vh;
+  max-height: 100vh;
+  width: 250px;
+  animation: fadeIn 0.5s linear;
+}
+
+.notify-title {
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+/* Form */
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  background-color: #fff;
+  width: 336px;
+  padding: 32px;
+  border-radius: 4px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: fadeOut 0.3s linear;
+}
+
+@keyframes fadeOut {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-heading {
+  font-size: 20px;
+}
+
+.fa-solid {
+}
+
+.fa-xmark:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.form-body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.radio-group div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-input {
+  height: 36px;
+  padding: 0 16px;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #dadada;
+}
+
+.form-radio {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.button {
+  height: 36px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-secondary {
+  border-color: #e0e0e0;
+}
+
+.button-primary {
+  background-color: var(--bg-primary);
+  color: var(--text-white);
+}
+
+/* Responsive */
+
+li {
+  list-style: none;
+}
+
+.header {
+  height: 56px;
+  width: 100%;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.header-list-item {
+  display: flex;
+  gap: 16px;
+}
+
+.list-item {
+}
+
+.btn-bars i {
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  /* Áp dụng khi màn hình bé hơn 600px */
+  .header-list-item {
+    display: none;
+  }
+
+  .btn-bars i {
+    display: block;
+  }
+}
+
+.list-product {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 32px;
+}
+
+.product {
+  height: 300px;
+  text-align: center;
+  line-height: 300px;
+  font-size: 30px;
+  width: 20%;
+  background-color: #50b83c;
+}
+
+@media screen and (max-width: 800px) {
+  .product {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .product {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .product {
+    width: 100%;
+  }
+}
